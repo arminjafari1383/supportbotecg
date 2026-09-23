@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  eco-smart-bot:
+    build: .
+    container_name: eco-smart-bot
+    restart: always
+    ports:
+      - "9000:9000"
+    env_file:
+      - .env
+    volumes:
+      - ./tickets.json:/app/tickets.json
